@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>情人节日记</title>
+
+		<!-- Bootstrap -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="share.css">
+	</head>
+	<body>
+
+		<!-- 值为0时显示singlepage，值为1时显示loverpage，值为2时显示breakpage，
+		默认值为0，既用户未提交数据的情况下，判定该用户单身 -->
+		<input type="hidden" class="setshareval" value="2">
+
+		<!-- 单身的时候显示 -->
+		<div class="page singlepage">
+			<input type="hidden" class="sharesingledate" value="2016/02/01" />
+
+			<div class="sharepage sharesinglepage" style="display:none;"></div>
+			<div class="four-triangle">
+				<div class="triangle tl-triangle"></div>
+				<div class="triangle tr-triangle"></div>
+				<div class="triangle bl-triangle"></div>
+				<div class="triangle br-triangle"></div>
+			</div>
+			<div class="singletimer">
+				<div class="singletimer-table singletimer-table-pic">
+					<div class="singletimer-pic" style="background-image:url(img/chiose_single2.png);"></div>
+				</div>
+				<div class="singletimer-table singletimer-table-timer">
+					<div class="singletimer-tr">
+						<div class="singletimer-td">
+							<p><span class="singletimer-t1"></span></p>
+							<span class="di"> </span>
+							<span class="onlysingleday">0</span>
+							<span class="tian"> </span>
+						</div>
+					</div>
+					<div class="singletimer-tr singletimer-tr-timerbox">
+						<div class="singletimer-td">
+							<div class="timerbox">
+								<p><span class="onlysinglehour">00</span>:<span class="onlysinglemin">00</span>:<span class="onlysinglesecond">00</span></p>
+								<div class="line"></div>
+							</div>
+						</div>
+					</div>
+					<div class="singletimer-tr singletimer-tr-btn">
+						<div class="singletimer-td">
+							<div class="btn-group">
+								<a href="index.html" class="singleshare-btn"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 恋爱的时候显示 -->
+		<div class="page loverpage">
+			<input type="hidden" class="shareloverdate" value="2016/02/01" />
+
+			<div class="four-triangle">
+				<div class="triangle tl-triangle"></div>
+				<div class="triangle tr-triangle"></div>
+				<div class="triangle bl-triangle"></div>
+				<div class="triangle br-triangle"></div>
+			</div>
+			<div class="lovertimer">
+				<div class="lovertimer-table lovertimer-table-pic">
+					<div class="lovertimer-pic" style="background-image:url(img/chiose_lover.png);"></div>
+				</div>
+				<div class="lovertimer-table lovertimer-table-timer">
+					<div class="lovertimer-tr">
+						<div class="lovertimer-td">
+							<p><span class="lovename">阿斯达</span> &amp; <span class="myname">炖鸡</span><span class="togeter"></span></p>
+							<span class="di"> </span>
+							<span class="onlyloverday">0</span>
+							<span class="tian"> </span>
+						</div>
+					</div>
+					<div class="lovertimer-tr lovertimer-tr-timerbox">
+						<div class="lovertimer-td">
+							<div class="timerbox">
+								<p><span class="onlyloverhour">00</span>:<span class="onlylovermin">00</span>:<span class="onlyloversecond">00</span></p>
+								<div class="line"></div>
+							</div>
+						</div>
+					</div>
+					<div class="lovertimer-tr lovertimer-tr-btn">
+						<div class="lovertimer-td">
+							<div class="btn-group">
+								<a href="index.html" class="lovershare-btn"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 分手的时候显示 -->
+		<div class="page breakpage">
+			<input type="hidden" class="sharebreakdate" value="2016/02/01" />
+			<div class="four-triangle">
+				<div class="triangle tl-triangle"></div>
+				<div class="triangle tr-triangle"></div>
+				<div class="triangle bl-triangle"></div>
+				<div class="triangle br-triangle"></div>
+			</div>
+			<div class="breaktimer">
+				<div class="breaktimer-table breaktimer-table-pic">
+					<div class="breaktimer-pic" style="background-image:url(img/chiose_lover.png);"></div>
+				</div>
+				<div class="breaktimer-table breaktimer-table-timer">
+					<div class="breaktimer-tr">
+						<div class="breaktimer-td">
+							<p><span class="lovename">阿斯达</span> &amp; <span class="myname">炖鸡</span><span class="togeter"></span></p>
+							<span class="di"> </span>
+							<span class="onlybreakday">0</span>
+							<span class="tian"> </span>
+						</div>
+					</div>
+					<div class="breaktimer-tr breaktimer-tr-timerbox">
+						<div class="breaktimer-td">
+							<div class="timerbox">
+								<p><span class="onlybreakhour">00</span>:<span class="onlybreakmin">00</span>:<span class="onlybreaksecond">00</span></p>
+								<div class="line"></div>
+							</div>
+						</div>
+					</div>
+					<div class="breaktimer-tr breaktimer-tr-btn">
+						<div class="breaktimer-td">
+							<div class="btn-group">
+								<a href="index.html" class="breakshare-btn"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="bootstrap/js/jquery.min.2.2.0.js" type="text/javascript"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="share.js" type="text/javascript"></script>
+	</body>

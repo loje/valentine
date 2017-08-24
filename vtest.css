@@ -1,0 +1,1849 @@
+*{
+    font-family: cursive,"Segoe UI Light","Microsoft Yahei",Arial;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input{
+	background-color: transparent;
+}
+
+.page{
+	margin: auto;
+	max-width: 640px;
+}
+
+/*loading*/
+.p0{
+	position: fixed;
+	left: 0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+
+	opacity: 1;
+	transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-webkit-transition: -webkit-opacity .5s;
+	-o-transition: opacity .5s;	
+}
+.p0-table{
+	display: table;
+	margin: auto;
+	width: 100%;
+	max-width: 640px;
+	height: 50%;
+	text-align: center;
+	background-color: rgb(252,245,219);
+}
+.p0-table .p0-tr{
+	display: table-row;
+	height: 50%;
+}
+.p0-table .p0-tr .p0-td{
+	display: table-cell;
+	vertical-align: middle;
+}
+.p0-table .p0-td .loadingheart{
+	margin: auto;
+	width: 163px;
+	height: 136px;
+	position: relative;
+}
+.p0-table .p0-td .loading-percentage{
+	width: 100%;
+	color: #571b01;
+    display: block;
+    padding: 3% 0px;
+	z-index: 2;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+.p0-table .p0-td .heart-loading{
+	position: absolute;
+	left: 0px;
+	bottom:0px;
+	width: 100%;
+	background-color: #e599b7;
+	background-image: url(img/wavesbg.jpg);
+	background-repeat: repeat-x;
+	background-position: 0% 0%;
+	background-size: 20%;
+	z-index: 0;
+	transition: height .25s;
+	-moz-transition: height .25s;
+	-webkit-transition: height .25s;
+	-o-transition: height .25s;	
+
+	animation: warebg 6s linear infinite;
+	-moz-animation: warebg 6s linear infinite;
+	-webkit-animation: warebg 6s linear infinite;
+	-o-animation: warebg 6s linear infinite;
+}
+@keyframes warebg
+{
+from {background-position: 0% 0%;);}
+to {background-position: 100% 0%;);}
+}
+
+@-moz-keyframes warebg /* Firefox */
+{
+from {background-position: 0% 0%;);}
+to {background-position: 100% 0%;);}
+}
+
+@-webkit-keyframes warebg /* Safari 和 Chrome */
+{
+from {background-position: 0% 0%;);}
+to {background-position: 100% 0%;);}
+}
+
+@-o-keyframes warebg /* Opera */
+{
+from {background-position: 0% 0%;);}
+to {background-position: 100% 0%;);}
+}
+
+.p0-table .p0-td .loadingheart-bg{
+	position: absolute;
+	left: 0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	background-image: url(img/loadingheart_bg.png);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+.p0-table .p0-td p{
+	font-size: 16px;
+	letter-spacing: 2px;
+	color: #571b01;
+}
+
+.loadingboy{
+	height: 75%;
+}
+.theboy{
+	position: relative;
+	margin: auto;
+	width: 50%;
+    height: 100%;
+	background-image: url(img/londingboy.png);
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+.hisheart{
+	position: absolute;
+	background-image: url(img/londingboysheart.png);
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+.hisheart-l{
+	left:-8%;
+	top:-13%;
+    width: 35%;
+    height: 35%;
+	animation: lup 2s ease infinite;
+	-moz-animation: lup 2s ease infinite;
+	-webkit-animation: lup 2s ease infinite;
+	-o-animation: lup 2s ease infinite;
+}
+@keyframes lup
+{
+from {opacity: 1;transform: translate(0px,0px);}
+to {opacity: 0;transform: translate(0px,-50px);}
+}
+
+@-moz-keyframes lup /* Firefox */
+{
+from {opacity: 1;-moz-transform: translate(0px,0px);}
+to {opacity: 0;-moz-transform: translate(0px,-50px);}
+}
+
+@-webkit-keyframes lup /* Safari 和 Chrome */
+{
+from {-webkit-opacity: 1;-webkit-transform: translate(0px,0px);}
+to {-webkit-opacity: 0;-webkit-transform: translate(0px,-50px);}
+}
+
+@-o-keyframes lup /* Opera */
+{
+from {opacity: 1;-o-transform: translate(0px,0px);}
+to {opacity: 0;-o-transform: translate(0px,-50px);}
+}
+
+.hisheart-m{
+	left:-10%;
+	top:10%;
+    width: 25%;
+    height: 25%;
+	animation: mup 1.5s ease infinite;
+	-moz-animation: mup 1.5s ease infinite;
+	-webkit-animation: mup 1.5s ease infinite;
+	-o-animation: mup 1.5s ease infinite;
+}
+@keyframes mup
+{
+from {opacity: 1;transform: translate(0px,0px);}
+to {opacity: 0;transform: translate(0px,-50px);}
+}
+
+@-moz-keyframes mup /* Firefox */
+{
+from {opacity: 1;-moz-transform: translate(0px,0px);}
+to {opacity: 0;-moz-transform: translate(0px,-50px);}
+}
+
+@-webkit-keyframes mup /* Safari 和 Chrome */
+{
+from {-webkit-opacity: 1;-webkit-transform: translate(0px,0px);}
+to {-webkit-opacity: 0;-webkit-transform: translate(0px,-50px);}
+}
+
+@-o-keyframes mup /* Opera */
+{
+from {opacity: 1;-o-transform: translate(0px,0px);}
+to {opacity: 0;-o-transform: translate(0px,-50px);}
+}
+
+.hisheart-s{
+	left:12%;
+	top:9%;
+    width: 15%;
+    height: 15%;
+	animation: sup .5s ease infinite;
+	-moz-animation: sup .5s ease infinite;
+	-webkit-animation: sup .5s ease infinite;
+	-o-animation: sup .5s ease infinite;
+}
+@keyframes sup
+{
+from {opacity: 1;transform: translate(0px,0px);}
+to {opacity: 0;transform: translate(0px,-50px);}
+}
+
+@-moz-keyframes sup /* Firefox */
+{
+from {opacity: 1;-moz-transform: translate(0px,0px);}
+to {opacity: 0;-moz-transform: translate(0px,-50px);}
+}
+
+@-webkit-keyframes sup /* Safari 和 Chrome */
+{
+from {-webkit-opacity: 1;-webkit-transform: translate(0px,0px);}
+to {-webkit-opacity: 0;-webkit-transform: translate(0px,-50px);}
+}
+
+@-o-keyframes sup /* Opera */
+{
+from {opacity: 1;-o-transform: translate(0px,0px);}
+to {opacity: 0;-o-transform: translate(0px,-50px);}
+}
+
+
+
+
+
+.swiper-container{
+	height: 100%;
+}
+.swiper-wrapper{
+	height: 100%;
+	background-color: 
+}
+.page .swiper-container .swiper-wrapper .swiper-slide{
+	background-color: rgb(252,245,219);
+    overflow: hidden;
+}
+.page .swiper-container .swiper-wrapper .p1 .four-triangle{
+	display: none;
+	position: absolute;
+	left: 0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.triangle{
+	position: absolute;
+	width: 18px;
+	height: 39px;
+	background-image: url(img/p1_triangle.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: contain;
+	z-index: 0;
+	animation: triangle 1s linear infinite alternate;
+	-moz-animation: triangle 1s linear infinite alternate;
+	-webkit-animation: triangle 1s linear infinite alternate;
+	-o-animation: triangle 1s linear infinite alternate;
+}
+
+@keyframes triangle
+{
+form   {transform: rotate(0deg);}
+to  {transform: rotate(360deg);}
+}
+
+@-moz-keyframes triangle /* Firefox */
+{
+form  {-moz-transform: rotate(0deg);}
+to  {-moz-transform: rotate360deg);}
+}
+
+@-webkit-keyframes triangle /* Safari 和 Chrome */
+{
+form  {-webkit-transform: rotate(0deg);}
+to  {-webkit-transform: rotate360deg);}
+}
+
+@-o-keyframes triangle /* Opera */
+{
+form  {-o-transform: rotate(0deg);}
+to  {-o-transform: rotate360deg);}
+}
+
+.tl-triangle{
+	left: 15px;
+	top:15px;
+}
+.tr-triangle{
+	right: 15px;
+	top:15px;
+	transform: rotate(210deg);
+	-ms-transform: rotate(210deg);
+	-webkit-transform: rotate(210deg);
+	-o-transform: rotate(210deg);
+	-moz-transform: rotate(210deg);	
+}
+.bl-triangle{
+	left: 15px;
+	bottom:15px;
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+.br-triangle{
+	right: 15px;
+	bottom:15px;
+	transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+}
+
+
+.loverpic{
+	width: 150px;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.loverpic input[type="file"]{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.addzero:before{
+	content: "0";
+}
+
+
+/*封面*/
+.page .swiper-container{
+	height: 100%;
+	background-color: rgb(252,245,219);
+}
+.page .swiper-container .swiper-wrapper .swiper-slide{
+	background-color: rgb(252,245,219);
+	overflow: hidden;
+}
+.page .swiper-container .swiper-wrapper .p1 .four-triangle{
+	position: absolute;
+	left: 0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.triangle{
+	position: absolute;
+	width: 18px;
+	height: 39px;
+	background-image: url(img/p1_triangle.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: contain;
+	z-index: 0;
+	animation: triangle 1s linear infinite alternate;
+	-moz-animation: triangle 1s linear infinite alternate;
+	-webkit-animation: triangle 1s linear infinite alternate;
+	-o-animation: triangle 1s linear infinite alternate;
+}
+
+@keyframes triangle
+{
+form   {transform: rotate(0deg);}
+to  {transform: rotate(360deg);}
+}
+
+@-moz-keyframes triangle /* Firefox */
+{
+form  {-moz-transform: rotate(0deg);}
+to  {-moz-transform: rotate360deg);}
+}
+
+@-webkit-keyframes triangle /* Safari 和 Chrome */
+{
+form  {-webkit-transform: rotate(0deg);}
+to  {-webkit-transform: rotate360deg);}
+}
+
+@-o-keyframes triangle /* Opera */
+{
+form  {-o-transform: rotate(0deg);}
+to  {-o-transform: rotate360deg);}
+}
+
+.tl-triangle{
+	left: 15px;
+	top:15px;
+}
+.tr-triangle{
+	right: 15px;
+	top:15px;
+	transform: rotate(210deg);
+	-ms-transform: rotate(210deg);
+	-webkit-transform: rotate(210deg);
+	-o-transform: rotate(210deg);
+	-moz-transform: rotate(210deg);	
+}
+.bl-triangle{
+	left: 15px;
+	bottom:15px;
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+.br-triangle{
+	right: 15px;
+	bottom:15px;
+	transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+}
+
+.cover-table{
+	position: relative;
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 1;
+}
+.cover-table .cover-td{
+	display: table-cell;
+	vertical-align: middle;
+}
+.cover-table .cover-td .cover-main{
+	width: 100%;
+	height: 15%;
+}
+.cover-table .cover-td .cover-main .cover-title{
+	position: relative;
+	margin: auto;
+	width: 75%;
+	height: 30px;
+	background-image: url(img/cover_t0.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50%;
+}
+.cover-table .cover-td .cover-main .cover-title .cover-area{
+	position: absolute;
+	left: 13%;
+	top:-48px;
+	width:35%;
+	height: 100px;
+	background-image: url(img/cover_t0_danshen.png); 
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50%;
+	z-index: 0;
+}
+.cover-table .cover-td .cover-main .cover-title .cover-heart{
+	position: absolute;
+	right: 0px;
+	bottom:0px;
+	width: 45px;
+	height:45px;
+	background-image: url(img/londingboysheart.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50%;
+}
+.cover-table .cover-td .cover-main .cover-title .love-title{
+	position: absolute;
+	left: 6%;
+	bottom: -26px;
+	width: 40%;
+	height: 30px;
+	background-image: url(img/cover_t1.png); 
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50%;
+	z-index: 0;
+}
+.cover-table .cover-td .cover-l{
+	margin: auto;
+	width: 75%;
+	height: 8%;
+	background-repeat: no-repeat;
+}
+.cover-table .cover-td .cover-l1{
+	background-image: url(img/cover_t0_l1.png);
+	background-position: 0% 50%;
+	background-size: 50%;
+}
+.cover-table .cover-td .cover-l2{
+	background-image: url(img/cover_t0_l2.png);
+	background-position: 50% 50%;
+	background-size: 85%;
+}
+.cover-table .cover-td .cover-l3{
+	background-image: url(img/cover_t0_l3.png);
+	background-position: 100% 50%;
+	background-size: 50%;
+}
+.cover-start{
+	margin: auto;
+	width: 75%;
+	height: 30%;
+}
+.cover-start .cover-point{
+	width: 100%;
+	height: 35%;
+	background-image: url(img/cover_point.png);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+    background-size: contain;
+	animation: coverpoint .5s ease infinite alternate;
+	-moz-animation: coverpoint .5s ease infinite alternate;
+	-webkit-animation: coverpoint .5s ease infinite alternate;
+	-o-animation: coverpoint .5s ease infinite alternate;
+}
+
+@keyframes coverpoint
+{
+form   {transform: translate(10px,-10px);}
+to  {transform: translate(-10px,10px);}
+}
+
+@-moz-keyframes coverpoint /* Firefox */
+{
+form  {-moz-transform: translate(10px,-10px);}
+to  {-moz-transform: translate(-10px,10px);}
+}
+
+@-webkit-keyframes coverpoint /* Safari 和 Chrome */
+{
+form  {-webkit-transform: translate(10px,-10px);}
+to  {-webkit-transform: translate(-10px,10px);}
+}
+
+@-o-keyframes coverpoint /* Opera */
+{
+form  {-o-transform: translate(10px,-10px);}
+to  {-o-transform: translate(-10px,10px);}
+}
+
+
+.cover-start .cover-btn{
+	width: 100%;
+	height: 70%;
+	background-image: url(img/cover_start_btn.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+    background-size: contain;
+	animation: coverbtn .5s linear 3.5s infinite alternate;
+	-moz-animation: coverbtn .5s linear 3.5s infinite alternate;
+	-webkit-animation: coverbtn .5s linear 3.5s infinite alternate;
+	-o-animation: coverbtn .5s linear 3.5s infinite alternate;
+}
+@keyframes coverbtn
+{
+	from {transform: rotate(-10deg);}
+	to {transform: rotate(10deg);}
+}
+
+@-moz-keyframes coverbtn /* Firefox */
+{
+	from {-moz-transform: rotate(-10deg);}
+	to {-moz-transform: rotate(10deg);}
+}
+
+@-webkit-keyframes coverbtn /* Safari 和 Chrome */
+{
+	from {-webkit-transform: rotate(-10deg);}
+	to {-webkit-transform: rotate(10deg);}
+}
+
+@-o-keyframes coverbtn /* Opera */
+{
+	from {-o-transform: rotate(-10deg);}
+	to {-o-transform: rotate(10deg);}
+}
+
+
+/*选择页面*/
+.choice-table{
+	position: relative;
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 1;
+}
+.choice-table .choice-td{
+	display: table-cell;
+	vertical-align: top;
+}
+.choice-table .choice-td .choice-main{
+	margin: auto;
+	width: 85%;
+	height: 85%;
+	position: relative;
+}
+.choice-table .choice-td .choice-main .choice-title{
+	position: absolute;
+	left: 0px;
+	top:0px;
+	width: 100%;
+	height: 35%;
+	z-index: 0;
+	background-image: url(img/chiose_title.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 60%;
+}
+.choice-table .choice-td .choice-main .choice-it{
+	position: absolute;
+	left: 0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.choice-table .choice-td .choice-main .choice-it .thechoice{
+	display: inline-block;
+	width: 49%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+	position: relative;
+}
+
+.choice-table .choice-td .choice-main .choice-it .choicelove,
+.choice-table .choice-td .choice-main .choice-it .choicesingle{
+	position: absolute;
+	left: 0px;
+	bottom: 0%;
+	width: 100%;
+	height: 35%;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+}
+.choice-table .choice-td .choice-main .choice-it .choicelove{
+	background-image: url(img/chiose_lover.png);
+	background-size: 95%;
+}
+.choice-table .choice-td .choice-main .choice-it .choicesingle{
+     background-image: url(img/chiose_single.png); 
+    background-size: 85%;
+}
+
+.choice-table .choice-td .choice-main .choice-it .thechoice .line{
+	margin: auto;
+	width: 1px;
+	height: 72%;
+	background-color: rgba(0,0,0,0.2);
+}
+
+/*选项下掉动画效果*/
+.chiosedwon{
+	animation: chiosedwon 1.5s ease;
+	-moz-animation: chiosedwon 1.5s ease;
+	-webkit-animation: chiosedwon 1.5s ease;
+	-o-animation: chiosedwon 1.5s ease;
+}
+@keyframes chiosedwon
+{
+0%   {transform: translate(0px,-100%);}
+25%  {transform: translate(0px,10%);}
+50%  {transform: translate(0px,-5%);}
+100% {transform: translate(0px,0%);}
+}
+
+@-moz-keyframes chiosedwon /* Firefox */
+{
+0%   {-moz-transform: translate(0px,-100%);}
+25%  {-moz-transform: translate(0px,10%);}
+50%  {-moz-transform: translate(0px,-5%);}
+100% {-moz-transform: translate(0px,0%);}
+}
+
+@-webkit-keyframes chiosedwon /* Safari 和 Chrome */
+{
+0%   {-webkit-transform: translate(0px,-100%);}
+25%  {-webkit-transform: translate(0px,10%);}
+50%  {-webkit-transform: translate(0px,-5%);}
+100% {-webkit-transform: translate(0px,0%);}
+}
+
+@-o-keyframes chiosedwon /* Opera */
+{
+0%   {-o-transform: translate(0px,-100%);}
+25%  {-o-transform: translate(0px,10%);}
+50%  {-o-transform: translate(0px,-5%);}
+100% {-o-transform: translate(0px,0%);}
+}
+/*选项摇晃效果*/
+.chioseshake{
+	transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	animation: chioseshake 1s ease-in-out infinite alternate;
+	-moz-animation: chioseshake 1s ease-in-out infinite alternate;
+	-webkit-animation: chioseshake 1s ease-in-out infinite alternate;
+	-o-animation: chioseshake 1s ease-in-out infinite alternate;
+}
+@keyframes chioseshake
+{
+form   {transform: rotate(-30deg);}
+to  {transform: rotate(30deg);}
+}
+
+@-moz-keyframes chioseshake /* Firefox */
+{
+form  {-moz-transform: rotate(-30deg);}
+to  {-moz-transform: rotate(30deg);}
+}
+
+@-webkit-keyframes chioseshake /* Safari 和 Chrome */
+{
+form  {-webkit-transform: rotate(-30deg);}
+to  {-webkit-transform: rotate(30deg);}
+}
+
+@-o-keyframes chioseshake /* Opera */
+{
+form  {-o-transform: rotate(-30deg);}
+to  {-o-transform: rotate(30deg);}
+}
+
+.choice-table .choice-td .choice-main .choice-it .single{
+	position: relative;
+}
+.choice-table .choice-td .choice-main .choice-it .single .momoda{
+	position: absolute;
+	left: 18%;
+	bottom: 1%;
+	width: 50px;
+	height: 50px;
+	background-image:url(img/londingboysheart.png);
+	background-size: 75%;
+	background-repeat: no-repeat;
+	opacity: 1;
+	transform: translate(0px,0px);
+	-moz-transform: translate(0px,0px);
+	-webkit-transform: translate(0px,0px);
+	-o-transform: translate(0px,0px);
+	animation: momoda 1s ease-in-out infinite;
+	-moz-animation: momoda 1s ease-in-out infinite;
+	-webkit-animation: momoda 1s ease-in-out infinite;
+	-o-animation: momoda 1s ease-in-out infinite;
+}
+@keyframes momoda
+{
+form   {transform: translate(0px,0px);opacity: 1;}
+to  {transform: translate(0px,-20px);opacity: 0;}
+}
+
+@-moz-keyframes momoda /* Firefox */
+{
+form   {-moz-transform: translate(0px,0px);opacity: 1;}
+to  {-moz-transform: translate(0px,-20px);opacity: 0;}
+}
+
+@-webkit-keyframes momoda /* Safari 和 Chrome */
+{
+form   {-webkit-transform: translate(0px,0px);-webkit-opacity: 1;}
+to  {-webkit-transform: translate(0px,-20px);-webkit-opacity: 0;}
+}
+
+@-o-keyframes momoda /* Opera */
+{
+form   {-o-transform: translate(0px,0px);opacity: 1;}
+to  {-o-transform: translate(0px,-20px);opacity: 0;}
+}
+
+.choice-table .choice-td .choice-option{
+	width: 100%;
+	height: 15%;
+}
+.choice-table .choice-td .choice-option .option{
+	display: inline-block;
+	width: 49%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}
+.choice-table .choice-td .choice-option .lover-option{
+	background-image: url(img/chiose_lover_msg.png);
+	background-size: 75%;
+}
+.choice-table .choice-td .choice-option .single-option{
+	background-image: url(img/chiose_single_msg.png);
+	background-size: 60%;
+}
+
+
+
+/*情侣填写名字的页面*/
+.loverchiose-table{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	display: table;
+	text-align: center;
+}
+.loverchiose-table .loverchiose-td{
+	display: table-cell;
+	vertical-align: top;
+}
+.loverchiose-table .loverchiose-td .loverlogo{
+	position: relative;
+	margin: auto;
+	width: 75%;
+	height: 100%;
+}
+.loverchiose-table .loverchiose-td .loverlogo .loverlogo-cartoon{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url(img/chiose_lover.png);
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+}
+.loverchiose-table .loverchiose-td .loverlogo .loverheart{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 39px;
+	height: 36px;
+	background-image: url(img/londingboysheart.png);
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	transform: translate(0px,0px);
+	-moz-transform: translate(0px,0px);
+	-webkit-transform: translate(0px,0px);
+	-o-transform: translate(0px,0px);
+	animation: momoda 1s ease-in-out infinite;
+	-moz-animation: momoda 1s ease-in-out infinite;
+	-webkit-animation: momoda 1s ease-in-out infinite;
+	-o-animation: momoda 1s ease-in-out infinite;
+}
+.loverchiose-table .loverchiose-td .loverlogo .line{
+	margin: auto;
+	width: 1px;
+	height: 33%;
+	background-color: rgba(0,0,0,0.2);
+}
+.loverchiose-table .loverchiose-td .t{
+	margin: auto;
+	margin-bottom: 3%;
+	width: 90%;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+.loverchiose-table .loverchiose-td .lovetime-t1{
+	background-image: url(img/lovertimepage_t1.png);
+	background-size: 65%;
+}
+.loverchiose-table .loverchiose-td .lovetime-t2{
+	background-image: url(img/lovertimepage_t2.png);
+	background-size: 70%;
+}
+
+.loverchiose-table .loverchiose-td .talkbox{
+	padding: 0px 5%;
+	width: 100%;
+	height: 65%;
+	background-image: url(img/lovernamepage_talkbox.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: contain;
+}
+.loverchiose-table .loverchiose-td .talkbox .input{
+	display: table;
+    margin: auto;
+    padding: 5% 0% 15% 0%;
+    width: 75%;
+    height: 100%;
+}
+.loverchiose-table .loverchiose-td .talkbox .input .input-tr{
+	display: table-row;
+	height: 33.3%;
+}
+.loverchiose-table .loverchiose-td .talkbox .input .input-tr .lovetime-t3{
+	background-image: url(img/lovertimepage_t3.png);
+	background-size: 100%;
+}
+.loverchiose-table .loverchiose-td .talkbox .input .input-tr .lovetime-t4 input.loverdate-input{
+	border:none;
+	outline: none;
+	color: #571b01;
+	text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.loverchiose-table .loverchiose-td .talkbox .input .input-tr .submit-loverdate{
+    margin-top: 5%;
+    width: 50%;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    background-image: url(img/lovernamepage_confirm.png);
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+
+.loverchiose-table .loverchiose-td .loverchiose-talkbox .input{
+	display: table;
+    margin: auto;
+    padding: 5% 5% 20% 5%;
+    width: 75%;
+    height: 75%;
+}
+.loverchiose-table .loverchiose-td .loverchiose-talkbox .input .input-tr{
+	display: table-row;
+	height: 50%;
+}
+
+.loverchiose-table .loverchiose-td .loverchiose-talkbox .input span.tj{
+	float: left;
+    display: block;
+	width: 70px;
+    height: 40px;
+	background-image: url(img/lovernamepage_tajiao.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 75%;
+}
+.loverchiose-table .loverchiose-td .loverchiose-talkbox .input input.lovername-input{
+	display: block;
+	width: 60%;
+	height: 40px;
+	border:none;
+	border-bottom: 2px solid #551900;
+	color: #551900;
+	font-weight: 700;
+	font-size: 16px;
+	outline: none;
+	box-shadow: none;
+}
+.loverchiose-table .loverchiose-td .loverchiose-talkbox .input .confirm{
+	margin-top: 5%;
+	width: 50%;
+	height:40px;
+	border:none;
+	background-color: transparent;
+	background-image: url(img/lovernamepage_confirm.png);
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+
+
+/*上传亲密的合照*/
+.lovepic{
+	width: 100%;
+	height: 100%;
+}
+.lovepic .lovepic-table{
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+.lovepic .lovepic-up{
+	height: 66%;
+}
+.lovepic .lovepic-up .lovepic-up1{
+	height: 30%;
+	z-index: 1;
+}
+.lovepic .lovepic-up .lovepic-up2{
+	height: 60%!important;
+	z-index: 0;
+}
+.lovepic .lovepic-up .lovepic-up3{
+	height: 90%;
+}
+.lovepic .lovepic-down{
+	height: 37%;
+	position: relative;
+	z-index: 2;
+}
+.lovepic .lovepic-table .lovepic-tr{
+	display: table-row;
+	height: 40%;
+	position: relative;
+}
+.lovepic .lovepic-table .lovepic-tr-p{
+	height: 25%;
+}
+
+.lovepic .lovepic-table .lovepic-tr .lovepic-pic{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+    background-size: contain;
+}
+.lovepic .lovepic-table .lovepic-tr .lovepic-pic1{
+    background-position: 50% 10%;
+    background-image: url(img/loverphotopage_p1.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.lovepic .lovepic-table .lovepic-tr .lovepic-pic2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+	height: 85%;
+    background-position: 50% 20%;
+	background-image: url(img/loverphotopage_p2.png);
+}
+.lovepic .lovepic-table .lovepic-tr .lovepic-td{
+	display: table-cell;
+	vertical-align: top;
+}
+
+.lovepic .lovepic-table .lovepic-tr .lovepic-p{
+	margin: auto;
+	width: 65%;
+	height: 50px;
+	background-image: url(img/loverphotopage_t3.png);
+	background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.lovepic .lovepic-table .lovepic-tr .lovepic-to{
+	margin: auto;
+	width: 65%;
+	height: 30px;
+	background-image: url(img/loverphotopage_t4.png);
+	background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.lovepic .lovepic-table .lovepic-tr .uploadpic{
+	margin: auto;
+	width: 35%;
+	height: 80px;
+	background-color: transparent;
+	border:none;
+	background-image: url(img/loverphotopage_btn.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    outline: none;
+	animation: coverbtn .5s linear 3.5s infinite alternate;
+	-moz-animation: coverbtn .5s linear 3.5s infinite alternate;
+	-webkit-animation: coverbtn .5s linear 3.5s infinite alternate;
+	-o-animation: coverbtn .5s linear 3.5s infinite alternate;
+}
+
+
+.lovepic .lovepic-table .lovepic-tr .uploadpic input[type="file"]{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.lovepic .lovepic-up .lovepic-tr .rahmen{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	display: table;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	background-image: url(img/loverphotopage_rahmen.png);
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+.lovepic .lovepic-up .lovepic-tr .rahmen-pic{
+    position: absolute;
+    left: 0px;
+    top: 37%;
+    width: 100%;
+    height: 23%;
+    z-index: 0;
+	background-position: 50%;
+    background-size: contain;
+	background-repeat: no-repeat;
+	display: table;
+	text-align: center;
+}
+.lovepic .lovepic-up .lovepic-tr .rahmen-pic .rahmen-pic-td{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.lovepic .lovepic-up .rahmen .rahmen-td{
+	display: table-cell;
+	vertical-align: middle;
+    padding-top: 15%;
+    padding-left: 10%;
+	color: #571b01;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+.lovepic .lovepic-up .rahmen-p{
+	height: 25%;
+	background-image: url(img/loverphotopage_rahmen_p.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+
+/*情侣照上传完毕*/
+.uploaded{
+	margin: auto;
+	width: 90%;
+	height: 100%;
+}
+.uploaded .uploaded-table{
+	display: table;
+	width: 100%;
+	height: 50%;
+	text-align: center;
+}
+.uploaded .uploaded-table .uploaded-td-bottom{
+	display: table-cell;
+	vertical-align: bottom;
+}
+.uploaded .uploaded-table .uploaded-td-bottom .veiwpic{
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+.uploaded .uploaded-table .uploaded-tr .uploaded-td{
+	display: table-cell;
+	vertical-align: middle;
+}
+.uploaded .uploaded-table .reset-upload{
+	display: table-row;
+	width: 75%;
+	height: 50%;
+}
+.uploaded .uploaded-table .reset-upload .reload-btn{
+	width: 100%;
+	height: 50%;
+	background-color: transparent;
+	border:none;
+	background-image: url(img/loveruploadedpage_t.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    outline: none;
+}
+.uploaded .uploaded-table .submit-upload{
+	display: table-row;
+	height: 70%;
+}
+.uploaded .uploaded-table .submit-upload .uploaded-td{
+	vertical-align: top;
+}
+.uploaded .uploaded-table .submit-upload .uploaded-td .submit-uploaded-btn{
+	width: 60%;
+	height: 65%;
+	background-color: transparent;
+	border:none;
+	background-image: url(img/loveruploadedpage_btn.png);
+	background-position: 50%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	outline: none;
+	animation: submituploaded .5s ease infinite alternate;
+	-moz-animation: submituploaded .5s ease infinite alternate;
+	-webkit-animation: submituploaded .5s ease infinite alternate;
+	-o-animation: submituploaded .5s ease infinite alternate;
+}
+@keyframes submituploaded
+{
+form   {transform: scale(0,0);}
+to  {transform: scale(1.15,1.15);}
+}
+
+@-moz-keyframes submituploaded /* Firefox */
+{
+form   {-moz-transform: scale(0,0);}
+to  {-moz-transform: scale(1.15,1.15);}
+}
+
+@-webkit-keyframes submituploaded /* Safari 和 Chrome */
+{
+form   {-webkit-transform: scale(0,0);}
+to  {-webkit-transform: scale(1.15,1.15);}
+}
+
+@-o-keyframes submituploaded /* Opera */
+{
+form   {-o-transform: scale(0,0);}
+to  {-o-transform: scale(1.15,1.15);}
+}
+
+
+/*情侣结果*/
+.lovetimer{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.lovetimer-table{
+	display: table;
+	width: 100%;
+}
+.lovetimer-pic{
+	width: 100%;
+	height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.lovetimer-table-pic{
+	height: 50%;
+}
+.lovetimer-table-timer{
+	height: 50%;
+}
+.lovetimer-table .lovetimer-tr{
+	display: table-row;
+	width: 75%;
+	height: 25%;
+	text-align: center;
+}
+
+.lovetimer-table .lovetimer-tr-togeter{
+	height: 15%;
+}
+.lovetimer-table .lovetimer-tr-btn{
+	height: 35%;
+}
+
+.lovetimer-table .lovetimer-tr .lovetimer-td{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 22px;
+	font-weight: 700;
+	color: #571b01;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td p{
+	margin-bottom: 0px;
+}
+
+.lovetimer-table .lovetimer-tr .lovetimer-td span{
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 700;
+	color: #571b01;
+	letter-spacing: 2px;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td span.togeter{
+	margin-bottom: -8px;
+	width: 150px;
+	height: 30px;
+	background-image: url(img/lovetimer_pic_togeter.png);
+	background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.lovetimer-table .lovetimer-tr .lovetimer-td span.di{
+	width: 30px;
+	height: 30px;
+	background-image: url(img/lovetimer_pic_togeter_p1.png);
+	background-position: 12% 100%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td span.onlyloveday{
+	font-size: 32px;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td span.tian{
+	width: 30px;
+	height: 30px;
+	background-image: url(img/lovetimer_pic_togeter_p2.png);
+	background-position: 12% 100%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.lovetimer-table .lovetimer-tr .lovetimer-td .timerbox{
+	margin: auto;
+	padding: 4px;
+	width: 75%;
+	border:2px solid #571b01;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5) inset;
+	background-color: #fff;
+	font-size: 22px;
+	color: #571b01;
+	letter-spacing: 2px;
+	position: relative;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td .timerbox .line{
+	position: absolute;
+	left: 0px;
+	top:50%;
+	width: 100%;
+	height: 1px;
+	background-color: #333;
+}
+
+.lovetimer-table .lovetimer-tr .lovetimer-td .timerbox p{
+	font-size: 32px;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td .timerbox p span{
+	font-size: 32px;
+}
+
+.lovetimer-table .lovetimer-tr-btn .lovetimer-td{
+	vertical-align: top;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td .btn-group{
+	position: relative;
+	width: 60%;
+	height: 100%;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td .switch-btn{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	background-image: url(img/thehidebtn.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+	transition: bottom .5s;
+	-moz-transition: bottom .5s;
+	-webkit-transition: bottom .5s;
+	-o-transition: bottom .5s;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td .switch-back-btn{
+	position: absolute;
+	right: 0px;
+	bottom: -50%;
+	width: 100%;
+	height: 30px;
+	background-image: url(img/thehidebtn.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+	transition: bottom .5s;
+	-moz-transition: bottom .5s;
+	-webkit-transition: bottom .5s;
+	-o-transition: bottom .5s;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td button{
+	outline: none;
+	box-shadow: none;
+	transition: bottom .5s;
+	-moz-transition: bottom .5s;
+	-webkit-transition: bottom .5s;
+	-o-transition: bottom .5s;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td button.sharelove-btn{
+	position: absolute;
+	left: 0px;
+	bottom:40%;
+	width: 100%;
+	height: 50%;
+	background-color: transparent;
+	border:none;
+	background-image: url(img/lovetimer_loveshare_btn.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+	animation: submituploaded .5s ease infinite alternate;
+	-moz-animation: submituploaded .5s ease infinite alternate;
+	-webkit-animation: submituploaded .5s ease infinite alternate;
+	-o-animation: submituploaded .5s ease infinite alternate;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td button.breakshare-btn{
+	position: absolute;
+	left: 0px;
+	bottom:-120%;
+	width: 100%;
+	height: 50%;
+	background-color: transparent;
+	border:none;
+	background-image: url(img/lovetimer_breakshare_btn.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.lovetimer-table .lovetimer-tr .lovetimer-td button.break-btn{
+	position: absolute;
+	left: 0px;
+	bottom: -120%;
+	width: 100%;
+	height: 50%;
+	background-color: transparent;
+	border:none;
+	background-image: url(img/lovetimer_break_btn.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.lovebreak .modal-table{
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.lovebreak .modal-table .modal-td{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.lovebreak .modal-table .modal-td .modal-dialog .modal-content .modal-body{
+	text-align: left;
+}
+.lovebreak .modal-table .modal-td .modal-dialog .modal-content .modal-body p{
+	margin-bottom: 0px;
+	text-indent: 2em;
+	padding: 6px 0px;
+}
+.lovebreak .modal-table .modal-td .modal-dialog .modal-content .modal-footer{
+	padding: 0px;
+	width: 100%;
+}
+.lovebreak .modal-table .modal-td .modal-dialog .modal-content .modal-footer button{
+	margin-left: 0px;
+	width: 50%;
+	border:none;
+	border-radius: 0px;
+	padding: 12px 0px;
+}
+.sharepage{
+	position: fixed;
+	left:0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.9);
+	background-repeat: no-repeat;
+	background-position: 100% 0%;
+	background-size: 75%;
+}
+.sharelovepage{
+	background-image: url(img/sharelovetips.png);
+}
+.sharebreakpage{
+	background-image: url(img/sharebreaktips.png);
+}
+
+
+
+/*填写单身狗时间*/
+.singlechiose-table{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	display: table;
+	text-align: center;
+	background-color: rgb(252,245,219);
+	z-index: 1;
+}
+.singlechiose-table .singlechiose-td {
+    display: table-cell;
+    vertical-align: top;
+}
+.singlechiose-table .singlechiose-td .singlelogo {
+    position: relative;
+    margin: auto;
+    width: 75%;
+    height: 100%;
+}
+
+.singlechiose-table .singlechiose-td .singlelogo .singlelogo-cartoon{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+    background-image: url(img/chiose_single2.png);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+}
+
+.singlechiose-table .singlechiose-td .singlelogo .line {
+    margin: auto;
+    width: 1px;
+    height: 33%;
+    background-color: rgba(0,0,0,0.2);
+}
+.singlechiose-table .singlechiose-td .t {
+    margin: auto;
+    margin-bottom: 3%;
+    width: 90%;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.singlechiose-table .singlechiose-td .singletime-t1 {
+    background-image: url(img/chiose_single2_t1.png);
+    background-size: 75%;
+}
+.singlechiose-table .singlechiose-td .singletime-t2 {
+    background-image: url(img/chiose_single2_t2.png);
+    background-size: 60%;
+}
+.singlechiose-table .singlechiose-td .talkbox {
+	padding: 0px 5%;
+    width: 100%;
+    height: 65%;
+    background-image: url(img/lovernamepage_talkbox.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+.singlechiose-table .singlechiose-td .singlechiose-talkbox .input {
+    display: table;
+    margin: auto;
+    padding: 5% 0 15%;
+    width: 75%;
+    height: 100%;
+}
+.singlechiose-table .singlechiose-td .singletime-talkbox .input{
+    display: table;
+    margin: auto;
+    padding: 5% 0% 15% 0%;
+    width: 75%;
+    height: 100%;
+}
+.singlechiose-table .singlechiose-td .singletime-talkbox .input .input-tr {
+    display: table-row;
+    height: 33.3%;
+}
+.singlechiose-table .singlechiose-td .singletime-talkbox .input .input-tr .singletime-t3 {
+    background-image: url(img/chiose_single2_t3.png);
+    background-size: 100%;
+}
+
+.singletime-t4 input {
+    border: none;
+    outline: none;
+    color: #571b01;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.singletime-t4 span {
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.singletime-t4 span.year {
+    background-image: url(img/lovertimepage_t4_year.png);
+    background-size: 65%;
+}
+.singletime-t4 span.month {
+    background-image: url(img/lovertimepage_t4_month.png);
+    background-size: 65%;
+}
+.singletime-t4 span.day {
+    background-image: url(img/lovertimepage_t4_day.png);
+    background-size: 65%;
+}
+
+.singlechiose-table .singlechiose-td .singletime-talkbox .input .confirm {
+    margin-top: 5%;
+    width: 50%;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    background-image: url(img/lovernamepage_confirm.png);
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+
+/*单身狗计时器*/
+.singletimer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.singletimer-table {
+    display: table;
+    width: 100%;
+}
+.singletimer-table-pic {
+    height: 40%;
+}
+.singletimer-pic {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+.singletimer-table-timer {
+    height: 60%;
+}
+.singletimer-table .singletimer-tr {
+    display: table-row;
+    width: 75%;
+    height: 25%;
+    text-align: center;
+}
+.singletimer-table .singletimer-tr .singletimer-td {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: 700;
+    color: #571b01;
+}
+.singletimer-table .singletimer-tr .singletimer-td p {
+    margin-bottom: 0px;
+}
+.singletimer-table .singletimer-tr .singletimer-td p .singletimer-t1 {
+    margin-bottom: -8px;
+    width: 150px;
+    height: 30px;
+    background-image: url(img/singletimer_t1.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.singletimer-table .singletimer-tr .singletimer-td span.di {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_togeter_p1.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.singletimer-table .singletimer-tr .singletimer-td span.onlysingleday {
+    font-size: 42px;
+}
+.singletimer-table .singletimer-tr .singletimer-td span.tian {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_togeter_p2.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.singletimer-table .singletimer-tr .singletimer-td span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #571b01;
+    letter-spacing: 2px;
+}
+.singletimer-table .singletimer-tr .singletimer-td .timerbox {
+    margin: auto;
+    padding: 4px;
+    width: 75%;
+    border: 2px solid #571b01;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5) inset;
+    background-color: #fff;
+    font-size: 22px;
+    color: #571b01;
+    letter-spacing: 2px;
+    position: relative;
+}
+.singletimer-table .singletimer-tr .singletimer-td .timerbox p span {
+    font-size: 36px;
+}
+
+.singletimer-table .singletimer-tr .singletimer-td .timerbox .line {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+}
+.singletimer-table .singletimer-tr-btn {
+    height: 60%;
+}
+.singletimer-table .singletimer-tr-btn .singletimer-td {
+    vertical-align: top;
+}
+.singletimer-table .singletimer-tr .singletimer-td .btn-group {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+.singletimer-table .singletimer-tr .singletimer-td .switch-btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    background-image: url(img/thehidebtn.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: bottom .5s;
+    -moz-transition: bottom .5s;
+    -webkit-transition: bottom .5s;
+    -o-transition: bottom .5s;
+}
+.singletimer-table .singletimer-tr .singletimer-td .switch-back-btn {
+    position: absolute;
+    right: 0px;
+    bottom: -50%;
+    width: 100%;
+    height: 30px;
+    background-image: url(img/thehidebtn.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: bottom .5s;
+    -moz-transition: bottom .5s;
+    -webkit-transition: bottom .5s;
+    -o-transition: bottom .5s;
+}
+.singletimer-table .singletimer-tr .singletimer-td button {
+    outline: none;
+    box-shadow: none;
+    transition: bottom .5s;
+    -moz-transition: bottom .5s;
+    -webkit-transition: bottom .5s;
+    -o-transition: bottom .5s;
+}
+.singletimer-table .singletimer-tr .singletimer-td button.singleshare-btn {
+    position: absolute;
+    left: 0px;
+    bottom: 40%;
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    border: none;
+    background-image: url(img/lovetimer_loveshare_btn.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+	animation: submituploaded .5s ease infinite alternate;
+	-moz-animation: submituploaded .5s ease infinite alternate;
+	-webkit-animation: submituploaded .5s ease infinite alternate;
+	-o-animation: submituploaded .5s ease infinite alternate;
+}
+.singletimer-table .singletimer-tr .singletimer-td button.nosingle-btn {
+    position: absolute;
+    left: 0px;
+    bottom: -120%;
+    width: 100%;
+    height: 40%;
+    background-color: transparent;
+    border: none;
+    background-image: url(img/nosingle_btn.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+	animation: submituploaded .5s ease infinite alternate;
+	-moz-animation: submituploaded .5s ease infinite alternate;
+	-webkit-animation: submituploaded .5s ease infinite alternate;
+	-o-animation: submituploaded .5s ease infinite alternate;
+}
+.sharesinglepage {
+    background-image: url(img/sharesingletips.png);
+}
+.nosingle .modal-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.nosingle .modal-table .modal-td {
+    display: table-cell;
+    vertical-align: middle;
+}
+.nosingle .modal-table .modal-td .modal-dialog .modal-content .modal-body {
+    text-align: left;
+}
+.nosingle .modal-table .modal-td .modal-dialog .modal-content .modal-body p {
+    margin-bottom: 0px;
+    text-indent: 2em;
+    padding: 6px 0px;
+}
+.nosingle .modal-table .modal-td .modal-dialog .modal-content .modal-footer {
+    padding: 0px;
+    width: 100%;
+}
+.nosingle .modal-table .modal-td .modal-dialog .modal-content .modal-footer button {
+    margin-left: 0px;
+    width: 50%;
+    border: none;
+    border-radius: 0px;
+    padding: 12px 0px;
+}

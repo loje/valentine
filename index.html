@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>情人节日记</title>
+
+		<!-- Bootstrap -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="swiper-3.3.0.min.css">
+		<link rel="stylesheet" type="text/css" href="animate.min.css">
+		<link rel="stylesheet" type="text/css" href="vtest.css">
+	</head>
+	<body>
+		<div class="page">
+
+			<!-- 该值对应share.html中class为setshareval的隐藏input值，
+			
+			值为0时单身，只需提取用户开始单身时间，
+			值为1时恋爱中，需要提取用户开始恋爱时间、上传的照片，
+			值为2时提交恋爱数据后分手，需要提取用户开始恋爱时间、上传的照片，
+
+			默认值为0，既用户未提交数据的情况下，判定该用户单身 -->
+			<input type="hidden" class="setsharepage" value="" />
+
+			<div class="sharepage sharelovepage" style="display:none;"></div>
+			<div class="sharepage sharebreakpage" style="display:none;"></div>
+			<div class="sharepage sharesinglepage" style="display:none;"></div>
+
+			<!-- 你真的要和她分手吗？ -->
+			<div class="modal fade lovebreak" id="loveBreak" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-table">
+					<div class="modal-td">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-body">
+									<p>你真的要和她分手吗？</p>
+									<p>还记得当初是什么原因让你深深地爱上这个人，为她付出所有青春和泪水？还记得你们在一起的小温馨和小甜蜜吗？那种热恋的感觉是那么的美妙，一旦走出了这一步就没有回头的机会了，你真的考虑清楚了吗？要和过去说再见吗？</p>
+								</div>
+								<div class="modal-footer btn-group">
+									<button type="button" class="btn btn-default letsbreak">我已经考虑好了</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">不！我还爱她！</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 你真的要脱单了吗？ -->
+			<div class="modal fade nosingle" id="nosingle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-table">
+					<div class="modal-td">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-body">
+									<p>你真的要脱单了吗？</p>
+									<p>你要备齐我们异端审问会-FF团了吗？你要忘记我们的团歌了吗？壮哉我们大FFF团！她到底有什么好？值得你为了女人背叛我们的事业跟灵魂？你要好好考虑清除，知不知道你现在到底在干什么！</p>
+								</div>
+								<div class="modal-footer btn-group">
+									<button type="button" class="btn btn-default letnosingle">我要脱单</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">不！壮哉我们大FFF团</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="p0">
+				<div class="p0-table">
+					<div class="p0-tr">
+						<div class="p0-td">
+							<div class="loadingheart">
+								<div class="loadingheart-bg"></div>
+								<div class="heart-loading"></div>
+							</div>
+							<span class="loading-percentage">0%</span>
+							<p>好感度正在持续上升</p>
+						</div>
+					</div>
+				</div>
+				<div class="p0-table">
+					<div class="p0-tr">
+						<div class="p0-td">
+							<div class="loadingboy">
+								<div class="theboy">
+									<div class="hisheart hisheart-l"></div>
+									<div class="hisheart hisheart-m"></div>
+									<div class="hisheart hisheart-s"></div>
+								</div>
+							</div>
+							<p>杂草君 | 良心制作</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+
+					<!-- 0封面 -->
+					<div class="swiper-slide swiper-no-swiping p1">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="cover-table">
+							<div class="cover-td">
+								<div class="cover-main">
+									<div class="cover-title ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="4.5s">
+										<div class="cover-area ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="5s"></div>
+										<div class="cover-heart ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="5.5s"></div>
+										<div class="love-title ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="5.5s"></div>
+									</div>
+								</div>
+								<div class="cover-l cover-l1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="3s"></div>
+								<div class="cover-l cover-l2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="3.5s"></div>
+								<div class="cover-l cover-l3 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="4s"></div>
+								<div class="cover-start ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="6s">
+									<div class="cover-point"></div>
+									<div class="cover-btn"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 1选择页面 -->
+					<div class="swiper-slide swiper-no-swiping p2">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="choice-table">
+							<div class="choice-td">
+								<div class="choice-main">
+									<div class="choice-title"></div>
+									<div class="choice-it">
+										<div class="thechoice lover">
+											<div class="line"></div>
+											<div class="choicelove"></div>
+										</div>
+										<div class="thechoice single">
+											<div class="choicesingle"></div>
+											<div class="momoda"></div>
+											<div class="line"></div>
+										</div>
+									</div>
+								</div>
+								<div class="choice-option">
+									<div class="option lover-option"></div>
+									<div class="option single-option"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 2填写情侣名字 -->
+					<div class="swiper-slide swiper-no-swiping p3-1">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="loverchiose-table">
+							<div class="loverchiose-td">
+								<div class="loverlogo">
+									<div class="line"></div>
+									<div class="loverlogo-cartoon"></div>
+								</div>
+							</div>
+						</div>
+						<div class="loverchiose-table">
+							<div class="loverchiose-td">
+								<div class="t t1"></div>
+								<div class="t t2"></div>
+								<div class="talkbox loverchiose-talkbox">
+									<div class="input">
+										<div class="input-tr">
+											<p>
+												<span class="tj"></span><input class="lovername-input" type="text">
+											</p>
+										</div>
+										<div class="input-tr">
+											<button class="confirm submit-lovername"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 3填写单身狗时间 -->
+					<div class="swiper-slide swiper-no-swiping p4-1">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="singlechiose-table">
+							<div class="singlechiose-td">
+								<div class="singlelogo">
+									<div class="line"></div>
+									<div class="singlelogo-cartoon"></div>
+								</div>
+							</div>
+						</div>
+						<div class="singlechiose-table">
+							<div class="singlechiose-td">
+								<div class="t singletime-t1"></div>
+								<div class="t singletime-t2"></div>
+								<div class="talkbox singletime-talkbox">
+									<div class="input">
+										<div class="input-tr">
+											<div class="t singletime-t3"></div>
+										</div>
+										<div class="input-tr">
+											<div class="t singletime-t4">
+												<input type="date" class="form-control singledate-input" value="2001-01-01" />
+											</div>
+										</div>
+										<div class="input-tr">
+											<button class="confirm"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 4情侣在一起的那天 -->
+					<div class="swiper-slide swiper-no-swiping p3-2">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="loverchiose-table">
+							<div class="loverchiose-td">
+								<div class="loverlogo">
+									<div class="line"></div>
+									<div class="loverlogo-cartoon"></div>
+									<div class="loverheart"></div>
+								</div>
+							</div>
+						</div>
+						<div class="loverchiose-table">
+							<div class="loverchiose-td">
+								<div class="t lovetime-t1"></div>
+								<div class="t lovetime-t2"></div>
+								<div class="talkbox lovetime-talkbox">
+									<div class="input">
+										<div class="input-tr">
+											<div class="t lovetime-t3"></div>
+										</div>
+										<div class="input-tr">
+											<div class="t lovetime-t4">
+												<input type="date" class="form-control loverdate-input" value="2001-01-01" />
+											</div>
+										</div>
+										<div class="input-tr">
+											<button class="confirm submit-loverdate"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 5单身狗计时器 -->
+					<div class="swiper-slide swiper-no-swiping p4-2">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="singletimer">
+							<div class="singletimer-table singletimer-table-pic">
+								<div class="singletimer-pic" style="background-image:url(img/chiose_single2.png);"></div>
+							</div>
+							<div class="singletimer-table singletimer-table-timer">
+								<div class="singletimer-tr">
+									<div class="singletimer-td">
+										<p><span class="singletimer-t1"></span></p>
+										<span class="di"> </span>
+										<span class="onlysingleday">0</span>
+										<span class="tian"> </span>
+									</div>
+								</div>
+								<div class="singletimer-tr singletimer-tr-timerbox">
+									<div class="singletimer-td">
+										<div class="timerbox">
+											<p><span class="onlysinglehour">00</span>:<span class="onlysinglemin">00</span>:<span class="onlysinglesecond">00</span></p>
+											<div class="line"></div>
+										</div>
+									</div>
+								</div>
+								<div class="singletimer-tr singletimer-tr-btn">
+									<div class="singletimer-td">
+										<div class="btn-group">
+											<div class="switch-btn"></div>
+											<div class="switch-back-btn"></div>
+											<button class="singleshare-btn"></button>
+											<!-- <button class="breakshare-btn"></button> -->
+											<button class="nosingle-btn" data-toggle="modal" data-target="#nosingle"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 6上传亲密照片 -->
+					<div class="swiper-slide swiper-no-swiping p3-3">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="lovepic">
+							<div class="lovepic-table lovepic-up">
+								<div class="lovepic-tr lovepic-up3">
+									<div class="lovepic-pic lovepic-pic1"></div>
+									<div class="lovepic-pic lovepic-pic2"></div>
+									<div class="rahmen"></div>
+									<div class="rahmen-pic require-pic">
+										<div class="rahmen-pic-td"></div>
+									</div>
+								</div>
+							</div>
+							<div class="lovepic-table lovepic-down">
+								<div class="lovepic-tr lovepic-tr-p">
+									<div class="lovepic-td">
+										<div class="lovepic-p"></div>
+										<div class="lovepic-to"></div>
+										<div class="uploadpic">
+											<input type="file" id="mypic" class="form-control loverpic-btn" />
+										</div>
+									</div>
+								</div>
+								<div class="rahmen-p" style="display:none;"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 7照片上传成功 -->
+					<div class="swiper-slide swiper-no-swiping p3-4">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="uploaded">
+							<div class="uploaded-table">
+								<div class="uploaded-td-bottom">
+									<div class="veiwpic require-pic" style="background-image:url(img/2555.jpg);"></div>
+								</div>
+							</div>
+							<div class="uploaded-table">
+								<div class="uploaded-tr reset-upload">
+									<div class="uploaded-td">
+										<button class="reload-btn"></button>
+									</div>
+								</div>
+								<div class="uploaded-tr submit-upload">
+									<div class="uploaded-td">
+										<button class="submit-uploaded-btn"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 8情侣结果 -->
+					<div class="swiper-slide swiper-no-swiping p3-5">
+						<div class="four-triangle">
+							<div class="triangle tl-triangle"></div>
+							<div class="triangle tr-triangle"></div>
+							<div class="triangle bl-triangle"></div>
+							<div class="triangle br-triangle"></div>
+						</div>
+						<div class="lovetimer">
+							<div class="lovetimer-table lovetimer-table-pic">
+								<div class="lovetimer-pic" style="background-image:url(img/2555.jpg);"></div>
+							</div>
+							<div class="lovetimer-table lovetimer-table-timer">
+								<div class="lovetimer-tr">
+									<div class="lovetimer-td">
+										<p><span class="lovename">萝卜</span> & <span class="myname">炖鸡</span><span class="togeter"></span></p>
+										<span class="di"> </span>
+										<span class="onlyloveday">315</span>
+										<span class="tian"> </span>
+									</div>
+								</div>
+								<div class="lovetimer-tr lovetimer-tr-timerbox">
+									<div class="lovetimer-td">
+										<div class="timerbox">
+											<p><span class="onlylovehour"></span>:<span class="onlylovemin"></span>:<span class="onlylovesecond"></span></p>
+											<div class="line"></div>
+										</div>
+									</div>
+								</div>
+								<div class="lovetimer-tr lovetimer-tr-btn">
+									<div class="lovetimer-td">
+										<div class="btn-group">
+											<div class="switch-btn"></div>
+											<div class="switch-back-btn"></div>
+											<button class="sharelove-btn"></button>
+											<button class="breakshare-btn"></button>
+											<button class="break-btn" data-toggle="modal" data-target="#loveBreak"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="bootstrap/js/jquery.min.2.2.0.js" type="text/javascript"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="swiper-3.3.0.jquery.min.js" type="text/javascript"></script>
+		<script src="swiper.animate1.0.2.min.js" type="text/javascript"></script>
+		<script src="vtest.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,547 @@
+.page {
+    display: none;
+	position: fixed;
+    margin: auto;
+    width: 100%;
+    max-width: 640px;
+    background-color: rgb(252,245,219);
+    z-index: 0;
+}
+.setshare{
+    display: block;
+    z-index: 1;
+}
+
+.breakpage{
+    background-color: #c3c3c3;
+}
+
+.four-triangle{
+	position: absolute;
+	left: 0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.triangle{
+	position: absolute;
+	width: 18px;
+	height: 39px;
+	background-image: url(img/p1_triangle.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: contain;
+	z-index: 0;
+	animation: triangle 1s linear infinite alternate;
+	-moz-animation: triangle 1s linear infinite alternate;
+	-webkit-animation: triangle 1s linear infinite alternate;
+	-o-animation: triangle 1s linear infinite alternate;
+}
+
+@keyframes triangle
+{
+form   {transform: rotate(0deg);}
+to  {transform: rotate(360deg);}
+}
+
+@-moz-keyframes triangle /* Firefox */
+{
+form  {-moz-transform: rotate(0deg);}
+to  {-moz-transform: rotate360deg);}
+}
+
+@-webkit-keyframes triangle /* Safari 和 Chrome */
+{
+form  {-webkit-transform: rotate(0deg);}
+to  {-webkit-transform: rotate360deg);}
+}
+
+@-o-keyframes triangle /* Opera */
+{
+form  {-o-transform: rotate(0deg);}
+to  {-o-transform: rotate360deg);}
+}
+
+.tl-triangle{
+	left: 15px;
+	top:15px;
+}
+.tr-triangle{
+	right: 15px;
+	top:15px;
+	transform: rotate(210deg);
+	-ms-transform: rotate(210deg);
+	-webkit-transform: rotate(210deg);
+	-o-transform: rotate(210deg);
+	-moz-transform: rotate(210deg);	
+}
+.bl-triangle{
+	left: 15px;
+	bottom:15px;
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+.br-triangle{
+	right: 15px;
+	bottom:15px;
+	transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+}
+
+
+/*恋爱中*/
+.lovertimer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.lovertimer-table {
+    display: table;
+    width: 100%;
+}
+.lovertimer-table-pic {
+    height: 40%;
+}
+.lovertimer-pic {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+.lovertimer-table-timer {
+    height: 60%;
+}
+.lovertimer-table .lovertimer-tr {
+    display: table-row;
+    width: 75%;
+    height: 25%;
+    text-align: center;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: 700;
+    color: #571b01;
+}
+
+.lovertimer-table .lovertimer-tr .lovertimer-td span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #571b01;
+    letter-spacing: 2px;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td span.togeter {
+    margin-bottom: -8px;
+    width: 150px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_togeter.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.lovertimer-table .lovertimer-tr .lovertimer-td p {
+    margin-bottom: 0px;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td p .lovertimer-t1 {
+    margin-bottom: -8px;
+    width: 150px;
+    height: 30px;
+    background-image: url(img/lovertimer_t1.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td span.di {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_togeter_p1.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td span.onlyloverday {
+    font-size: 42px;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td span.tian {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_togeter_p2.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.lovertimer-table .lovertimer-tr .lovertimer-td .timerbox {
+    margin: auto;
+    padding: 4px;
+    width: 75%;
+    border: 2px solid #571b01;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5) inset;
+    background-color: #fff;
+    font-size: 22px;
+    color: #571b01;
+    letter-spacing: 2px;
+    position: relative;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td .timerbox p span {
+    font-size: 36px;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td .timerbox .line {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+}
+.lovertimer-table .lovertimer-tr-btn {
+    height: 60%;
+}
+.lovertimer-table .lovertimer-tr-btn .lovertimer-td {
+    vertical-align: top;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td .btn-group {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+.lovertimer-table .lovertimer-tr .lovertimer-td .lovershare-btn {
+	display: block;
+	text-decoration: none;
+    position: absolute;
+    left: 0px;
+    bottom: 40%;
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    border: none;
+    background-image: url(img/loveplay.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+    animation: submituploaded .5s ease infinite alternate;
+    -moz-animation: submituploaded .5s ease infinite alternate;
+    -webkit-animation: submituploaded .5s ease infinite alternate;
+    -o-animation: submituploaded .5s ease infinite alternate;
+}
+
+
+/*单身中*/
+.singletimer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.singletimer-table {
+    display: table;
+    width: 100%;
+}
+.singletimer-table-pic {
+    height: 40%;
+}
+.singletimer-pic {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+.singletimer-table-timer {
+    height: 60%;
+}
+.singletimer-table .singletimer-tr {
+    display: table-row;
+    width: 75%;
+    height: 25%;
+    text-align: center;
+}
+.singletimer-table .singletimer-tr .singletimer-td {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: 700;
+    color: #571b01;
+}
+
+.singletimer-table .singletimer-tr .singletimer-td span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #571b01;
+    letter-spacing: 2px;
+}
+
+.singletimer-table .singletimer-tr .singletimer-td p {
+    margin-bottom: 0px;
+}
+.singletimer-table .singletimer-tr .singletimer-td p .singletimer-t1 {
+    margin-bottom: -8px;
+    width: 150px;
+    height: 30px;
+    background-image: url(img/singletimer_t1.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.singletimer-table .singletimer-tr .singletimer-td span.di {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_togeter_p1.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.singletimer-table .singletimer-tr .singletimer-td span.onlysingleday {
+    font-size: 42px;
+}
+.singletimer-table .singletimer-tr .singletimer-td span.tian {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_togeter_p2.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.singletimer-table .singletimer-tr .singletimer-td .timerbox {
+    margin: auto;
+    padding: 4px;
+    width: 75%;
+    border: 2px solid #571b01;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5) inset;
+    background-color: #fff;
+    font-size: 22px;
+    color: #571b01;
+    letter-spacing: 2px;
+    position: relative;
+}
+.singletimer-table .singletimer-tr .singletimer-td .timerbox p span {
+    font-size: 36px;
+}
+.singletimer-table .singletimer-tr .singletimer-td .timerbox .line {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+}
+.singletimer-table .singletimer-tr-btn {
+    height: 60%;
+}
+.singletimer-table .singletimer-tr-btn .singletimer-td {
+    vertical-align: top;
+}
+.singletimer-table .singletimer-tr .singletimer-td .btn-group {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+.singletimer-table .singletimer-tr .singletimer-td .singleshare-btn {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    left: 0px;
+    bottom: 40%;
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    border: none;
+    background-image: url(img/loveplay.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+    animation: submituploaded .5s ease infinite alternate;
+    -moz-animation: submituploaded .5s ease infinite alternate;
+    -webkit-animation: submituploaded .5s ease infinite alternate;
+    -o-animation: submituploaded .5s ease infinite alternate;
+}
+
+
+/*分手中*/
+.breaktimer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.breaktimer-table {
+    display: table;
+    width: 100%;
+}
+.breaktimer-table-pic {
+    height: 40%;
+}
+.breaktimer-pic {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+.breaktimer-table-timer {
+    height: 60%;
+}
+.breaktimer-table .breaktimer-tr {
+    display: table-row;
+    width: 75%;
+    height: 25%;
+    text-align: center;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+
+.breaktimer-table .breaktimer-tr .breaktimer-td span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 2px;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td span.togeter {
+    margin-bottom: -8px;
+    width: 150px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_break.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.breaktimer-table .breaktimer-tr .breaktimer-td p {
+    margin-bottom: 0px;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td p .breaktimer-t1 {
+    margin-bottom: -8px;
+    width: 150px;
+    height: 30px;
+    background-image: url(img/breaktimer_t1.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td span.di {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_break_p1.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td span.onlybreakday {
+    font-size: 42px;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td span.tian {
+    width: 30px;
+    height: 30px;
+    background-image: url(img/lovetimer_pic_break_p2.png);
+    background-position: 12% 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+.breaktimer-table .breaktimer-tr .breaktimer-td .timerbox {
+    margin: auto;
+    padding: 4px;
+    width: 75%;
+    border: 2px solid #666;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5) inset;
+    background-color: #fff;
+    font-size: 22px;
+    color: #000;
+    letter-spacing: 2px;
+    position: relative;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td .timerbox p span {
+    font-size: 36px;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td .timerbox .line {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+}
+.breaktimer-table .breaktimer-tr-btn {
+    height: 60%;
+}
+.breaktimer-table .breaktimer-tr-btn .breaktimer-td {
+    vertical-align: top;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td .btn-group {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+.breaktimer-table .breaktimer-tr .breaktimer-td .breakshare-btn {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    left: 0px;
+    bottom: 40%;
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    border: none;
+    background-image: url(img/breakplay.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+    animation: submituploaded .5s ease infinite alternate;
+    -moz-animation: submituploaded .5s ease infinite alternate;
+    -webkit-animation: submituploaded .5s ease infinite alternate;
+    -o-animation: submituploaded .5s ease infinite alternate;
+}
+
+
+
+
+@keyframes submituploaded
+{
+form   {transform: scale(0,0);}
+to  {transform: scale(1.15,1.15);}
+}
+
+@-moz-keyframes submituploaded /* Firefox */
+{
+form   {-moz-transform: scale(0,0);}
+to  {-moz-transform: scale(1.15,1.15);}
+}
+
+@-webkit-keyframes submituploaded /* Safari 和 Chrome */
+{
+form   {-webkit-transform: scale(0,0);}
+to  {-webkit-transform: scale(1.15,1.15);}
+}
+
+@-o-keyframes submituploaded /* Opera */
+{
+form   {-o-transform: scale(0,0);}
+to  {-o-transform: scale(1.15,1.15);}
+}
+
+.addzero:before{
+	content: "0";
+}
